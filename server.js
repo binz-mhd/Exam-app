@@ -9,9 +9,8 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+mongoose.connect('mongodb+srv://binzid:<JkvtPT0ulNNpjo22>@achuu-exam.fbpbyqd.mongodb.net/?retryWrites=true&w=majority', {
+    tls: true
 });
 
 const questionSchema = new mongoose.Schema({
