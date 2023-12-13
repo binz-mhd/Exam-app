@@ -13,6 +13,13 @@ mongoose.connect(process.env.MONGODB_URI, {
     tls: true
 });
 
+.then(() => {
+    console.log('Connected to MongoDB');
+})
+.catch((error) => {
+    console.error('MongoDB connection error:', error);
+});
+
 const questionSchema = new mongoose.Schema({
     question: String,
     options: [String],
