@@ -9,8 +9,7 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect(process.env.MONGODB_URI, {
-});
+mongoose.connect(process.env.MONGODB_URI,);
 
 const questionSchema = new mongoose.Schema({
     question: String,
