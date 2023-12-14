@@ -10,9 +10,6 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 mongoose.connect(process.env.MONGODB_URI, {
-    tls: true,
-    ssl: true,
-    sslValidate: true,
 });
 
 const questionSchema = new mongoose.Schema({
